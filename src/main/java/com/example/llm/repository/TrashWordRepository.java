@@ -7,5 +7,10 @@ package com.example.llm.repository;
   @since 30.11.23 - 13.56
 */
 
-public interface TrashWordRepository {
+import com.example.llm.model.TrashWord;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface TrashWordRepository extends MongoRepository<TrashWord, String> {
 }

@@ -16,4 +16,8 @@ public class TrashWord {
     private String id;
     private String body;
     private String root;
+
+    public TrashWord(String body) {
+        this.body = body;
+    }
 }
