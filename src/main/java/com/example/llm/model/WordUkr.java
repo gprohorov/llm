@@ -33,6 +33,10 @@ public class WordUkr {
         this.synonymsUkr = synonymsUkr;
     }
 
+    public WordUkr(String body) {
+        this.body = body;
+    }
+
     public String getId() {
         return id;
     }

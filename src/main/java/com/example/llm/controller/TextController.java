@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 
 
@@ -25,8 +26,9 @@ import java.util.List;
         private final TextService service;
 
        @GetMapping("/trash/{file1}/{file2}")
-       public void extractTrashToDb(@PathVariable String file1, @PathVariable String file2) {
-
+       public void extractTrashToDb(@PathVariable String file1,
+                                    @PathVariable String file2) throws IOException {
+            service.saveTrashWords(file1, file2);
        }
 
     }
